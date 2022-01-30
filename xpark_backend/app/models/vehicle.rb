@@ -6,16 +6,16 @@ class Vehicle < ApplicationRecord
 
   # validations
   validates :name, presence: true
-  validate :validate_state_order, if: :current_state_id_changed?, on: :update
+  validate :validate_state_position, if: :current_state_id_changed?, on: :update
 
   # callbacks
   after_initialize :default_values, unless: :persisted?
 
   private
 
-  def validate_state_order
-    old_order = State.find(current_state_id_was).order
-    return unless (current_state.order - old_order).abs > 1
+  def validate_state_position
+    old_position = State.find(current_state_id_was).position
+    return unless (current_state.position - old_position).abs > 1
 
     errors.add(:current_state, 'The state of vehicle can only updated one step ahead or one step behind')
   end
