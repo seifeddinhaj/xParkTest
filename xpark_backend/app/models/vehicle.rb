@@ -21,6 +21,6 @@ class Vehicle < ApplicationRecord
   end
 
   def default_values
-    self.current_state ||= State.find_by_order(1)
+    self.current_state ||= State.find_by_position(1)
   end
 end
