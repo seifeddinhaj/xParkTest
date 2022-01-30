@@ -23,7 +23,7 @@ gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise_token_auth'
 gem 'rack-cors'
-gem 'acts_as_list'
+gem 'acts_as_list', '~> 0.7.2'
 
 
 group :development, :test do

@@ -6,10 +6,10 @@ class Vehicle < ApplicationRecord
 
   # validations
   validates :name, presence: true
-  validates :validate_state_order, if: :current_state_id_changed?, on: :update
+  validate :validate_state_order, if: :current_state_id_changed?, on: :update
 
   # callbacks
-  after_create :default_values
+  after_initialize :default_values, unless: :persisted?
 
   private
 
