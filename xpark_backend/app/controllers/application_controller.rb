@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:role, :name, :nickname, :jobtitle, :phone, :address, :gender, :birthday, :company_id, :description, :post, avatar: :data, uploaded_cv: :data])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:role, :name, :nickname, :email, :password, :password_confirmation])
   end
 
   def authorize_only_admin!
