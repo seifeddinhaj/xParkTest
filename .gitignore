@@ -25,3 +25,4 @@ xpark_backend/tmp/*
 
 # Ignore master key for decrypting credentials and more.
 /xpark_backend/config/master.key
+/xpark_backend/coverage
