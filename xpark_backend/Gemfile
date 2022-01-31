@@ -36,7 +36,6 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'database_cleaner'
   gem 'api_matchers'
-  gem 'acts_as_list', '~> 0.7.2'
   gem 'simplecov', require: false
 
 end

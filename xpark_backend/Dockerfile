@@ -12,6 +12,8 @@ COPY Gemfile.lock /xpark_backend/Gemfile.lock
 
 RUN bundle install
 
+# ENV RAILS_ENV=production
+
 COPY . /xpark_backend
 
 EXPOSE 3000

@@ -6673,6 +6673,7 @@ Processing by Api::V1::StatesController#index as JSON
 Completed 200 OK in 25ms (Views: 2.6ms | ActiveRecord: 5.2ms | Allocations: 9474)
 
 
+<<<<<<< HEAD
 Started OPTIONS "/api/v1/auth/sign_in" for ::1 at 2022-02-01 19:53:01 +0100
   [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Started POST "/api/v1/auth/sign_in" for ::1 at 2022-02-01 19:53:01 +0100
@@ -11285,5 +11286,13 @@ Completed 200 OK in 45ms (Views: 4.7ms | ActiveRecord: 16.5ms | Allocations: 163
   [1m[36mUser Load (2.6ms)[0m  [1m[37mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 1], ["LIMIT", 1]]
   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
 Completed 200 OK in 54ms (Views: 0.2ms | ActiveRecord: 12.7ms | Allocations: 19321)
+=======
+Started GET "/api/v1/states" for ::1 at 2022-01-31 17:18:19 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::StatesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT $2[0m  [["uid", "admin_1@gmail.com"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_api_v1_user! rendered or redirected
+Completed 401 Unauthorized in 189ms (Views: 0.2ms | ActiveRecord: 3.8ms | Allocations: 363625)
+>>>>>>> docker setup
 
 
