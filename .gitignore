@@ -8,8 +8,8 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/xpark_backend/log/*
-/xpark_backend/tmp/*
+xpark_backend/log/*
+xpark_backend/tmp/*
 !/log/.keep
 !/tmp/.keep
 
