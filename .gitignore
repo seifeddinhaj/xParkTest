@@ -8,20 +8,20 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
+/xpark_backend/log/*
+/xpark_backend/tmp/*
 !/log/.keep
 !/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
+/xpark_backend/tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
+/xpark_backend/storage/*
 !/storage/.keep
-.byebug_history
+/xpark_backend.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+/xpark_backend/config/master.key
