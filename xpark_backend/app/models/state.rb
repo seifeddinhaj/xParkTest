@@ -30,7 +30,7 @@ class State < ApplicationRecord
   end
 
   def update_position
-    shuffle_positions_on_intermediate_items position_was, position, id
+    shuffle_positions_on_intermediate_items position_was, position, id if position
   end
 
 end

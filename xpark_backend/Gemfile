@@ -29,6 +29,16 @@ gem 'acts_as_list', '~> 0.7.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'ruby_event_store-rspec'
+  gem 'faker'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  gem 'api_matchers'
+  gem 'acts_as_list', '~> 0.7.2'
+
+
 end
 
 group :development do
