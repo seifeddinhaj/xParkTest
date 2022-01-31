@@ -23,16 +23,15 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
 
 development:
-  <<: *default
+  # <<: *default
   database: xpark_backend_development
-  # adapter: postgresql
-  # encoding: unicode
-  # username: postgres
-  # password: password
-  # host: database
-  # port: 5432
-  # pool: 5
-  # database: xpark_backend_test
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: password
+  host: database
+  port: 5432
+  pool: 5
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -65,16 +64,16 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: xpark_backend_test
-  # adapter: postgresql
-  # encoding: unicode
-  # username: postgres
-  # password: password
-  # host: database
-  # port: 5432
-  # pool: 5
+  # <<: *default
   # database: xpark_backend_test
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: password
+  host: database
+  port: 5432
+  pool: 5
+  database: xpark_backend_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
