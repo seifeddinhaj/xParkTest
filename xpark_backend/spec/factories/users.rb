@@ -6,11 +6,6 @@ FactoryBot.define do
     password              { 'password'                                                                   }
     password_confirmation { |user| user.password                                                         }
 
-    # after(:build) do |user|
-    #   byebug
-    #   user.skip_confirmation!
-    # end
-
     trait :regular_role do
       after :build do |user|
         user.role = 1
