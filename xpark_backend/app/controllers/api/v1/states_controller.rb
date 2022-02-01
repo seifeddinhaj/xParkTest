@@ -17,7 +17,7 @@ class Api::V1::StatesController < ApplicationController
     if state.save
       render json: state, status: :created
     else
-      render json: { message: state.errors.full_messages }, status: :unprocessable_entity
+      render json: { message: state.errors.full_messages.join("\n") }, status: :unprocessable_entity
     end
   end
 
@@ -25,7 +25,7 @@ class Api::V1::StatesController < ApplicationController
     if @state.update(state_params)
       render json: @state
     else
-      render json: { message: @state.errors.full_messages }, status: :unprocessable_entity
+      render json: { message: @state.errors.full_messages.join("\n") }, status: :unprocessable_entity
     end
   end
 

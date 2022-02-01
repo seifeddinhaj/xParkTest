@@ -1,0 +1,8 @@
+export const GET_STATE_SUCCESS = 'Get_State_success'
+export const GET_STATE_FAILED = 'Get_State_failed'
+export const ADD_STATE_SUCCESS = 'add_State_success'
+export const ADD_STATE_FAILED = 'add_State_failed'
+export const EDIT_STATE_SUCCESS = 'edit_State_success'
+export const EDIT_STATE_FAILED = 'edit_State_failed'
+export const DELETE_STATE_SUCCESS = 'delete_State_success'
+export const DELETE_STATE_FAILED = 'delete_State_failed'

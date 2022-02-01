@@ -8,8 +8,8 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-xpark_backend/log/*
-xpark_backend/tmp/*
+/xpark_backend/log/*
+/xpark_backend/tmp/*
 !/log/.keep
 !/tmp/.keep
 
@@ -26,3 +26,5 @@ xpark_backend/tmp/*
 # Ignore master key for decrypting credentials and more.
 /xpark_backend/config/master.key
 /xpark_backend/coverage
+
+/xparkFront/node_modules
