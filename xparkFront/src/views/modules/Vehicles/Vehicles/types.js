@@ -1,0 +1,8 @@
+export const GET_VEHICLE_SUCCESS = 'Get_Vehicle_success'
+export const GET_VEHICLE_FAILED = 'Get_Vehicle_failed'
+export const ADD_VEHICLE_SUCCESS = 'add_Vehicle_success'
+export const ADD_VEHICLE_FAILED = 'add_Vehicle_failed'
+export const EDIT_VEHICLE_SUCCESS = 'edit_Vehicle_success'
+export const EDIT_VEHICLE_FAILED = 'edit_Vehicle_failed'
+export const DELETE_VEHICLE_SUCCESS = 'delete_Vehicle_success'
+export const DELETE_VEHICLE_FAILED = 'delete_Vehicle_failed'

@@ -11,7 +11,7 @@ class Api::V1::VehiclesController < ApplicationController
     if vehicle.save
       render json: vehicle.to_json(include: :current_state), status: :created
     else
-      render json: { message: vehicle.errors.full_messages }, status: :unprocessable_entity
+      render json: { message: vehicle.errors.full_messages.join("\n") }, status: :unprocessable_entity
     end
   end
 
@@ -23,7 +23,7 @@ class Api::V1::VehiclesController < ApplicationController
     if @vehicle.update(vehicle_params)
       render json: @vehicle.to_json(include: :current_state)
     else
-      render json: { message: @vehicle.errors.full_messages }, status: :unprocessable_entity
+      render json: { message: @vehicle.errors.full_messages.join("\n") }, status: :unprocessable_entity
     end
   end
 
