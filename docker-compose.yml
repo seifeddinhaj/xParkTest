@@ -8,16 +8,16 @@ services:
       POSTGRES_PASSWORD: "password"
     restart: always
   web:
-    build: .
+    build: ./xpark_backend
     restart: always
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     ports:
       - "3000:3000"
     depends_on:
       - database
-    # environment:
-    #   RAILS_ENV: production
-    # links:
-    #   - database
+  frontend:
+    build: ./xparkFront
+    depends_on:
+      - web
 volumes:
     postgresdb:
