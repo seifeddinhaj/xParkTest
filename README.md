@@ -138,3 +138,64 @@ Password = "password"
 - Run `TEST_COVERAGE=true bundle exec rspec`
 - A folder will be generated in `/coverage/rspec`
 - Open `coverage/rspec/index.html` file from browser
+
+
+```
+### Docker
+```
+
+Dependencies:
+This is a deployment using Docker & Docker-compose. So you should have:
+```
+docker
+docker-compose
+```
+installed in your server.
+## What you should know about docker-compose.yml
+
+### Services
+```
+We have 3 services in this project:
+  - **`web` service**:
+    This service is our RoR web service application
+  - **`database` service**
+  - **`redis` service**
+```
+### Volumes
+
+To preserve our data we use volume for:
+```
+  - storing our database data: volume name => `postgresdb`
+```
+## Usage
+
+To deploy this project on your local machine in development mode:
+```
+  - 1.You have to go in the branche `docker` `git checkout docker`
+  - 2.Start all services with `docker-compose up --build`
+  - 3.Connect into container web with `docker exec -it xpark_web_1 bash`
+  - 4.set up the database with `rails db:setup`
+  - 5.go back to the log of the docker-compose build command to see the address
+    in wich the front app is running it's like this one "On Your Network:  http://192.168.48.4:3000"
+```
+![alt text](https://github.com/seifeddinhaj/xParkTest/blob/master/log.png)
+```
+```
+Shutdown all services
+```
+docker-compose down
+```
+
+Connect into container service
+```
+docker-compose run $SERVICE_NAME bash
+```
+
+Or
+```
+docker exec -it $CONTAINTER_NAME bash
+```
+
+List all starting container
+```
+docker ps
